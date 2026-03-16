@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controle de Estudos - Sistema</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>📚 Controle de Estudos</h1>
+
+        <div class="dashboard" id="dashboard">
+            <h3>Total Estudado: <span id="total-horas-global">0</span>h</h3>
+        </div>
+
+        <section class="form-section">
+            <h2 id="form-title">Nova Disciplina</h2>
+            <form id="form-disciplina">
+                <input type="hidden" id="input-id">
+                
+                <div class="input-group">
+                    <label for="input-nome">Disciplina</label>
+                    <input type="text" id="input-nome" required placeholder="Ex: Engenharia de Software">
+                </div>
+
+                <div class="input-group">
+                    <label for="input-professor">Professor</label>
+                    <input type="text" id="input-professor" required placeholder="Nome do docente">
+                </div>
+
+                <div class="input-group">
+                    <label for="input-carga">Carga Total (h)</label>
+                    <input type="number" id="input-carga" required min="1">
+                </div>
+
+                <div class="input-group">
+                    <label for="input-area">Área</label>
+                    <select id="input-area" required>
+                        <option value="">Selecione...</option>
+                        <option value="Exatas">Exatas</option>
+                        <option value="Humanas">Humanas</option>
+                        <option value="Biológicas">Biológicas</option>
+                        <option value="Tecnologia">Tecnologia</option>
+                    </select>
+                </div>
+
+                <button type="submit" id="btn-submit" class="btn-primary">Salvar Disciplina</button>
+            </form>
+        </section>
+
+        <section class="list-section">
+            <h2>Disciplinas Cadastradas</h2>
+            <div id="lista-disciplinas">
+                </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
